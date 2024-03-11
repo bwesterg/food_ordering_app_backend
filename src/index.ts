@@ -15,6 +15,11 @@ app.use(cors());
 //   res.json({ message: "Hello!" });
 // });
 
+app.get("/health", async (req: Request, res: Response) => {
+  res.send({ message: "good health"});
+})
+
+
 // whenever a request is received to /api/my/user,
 //  this line forwards the request to myUserRoute
 app.use("/api/my/user", myUserRoute);
